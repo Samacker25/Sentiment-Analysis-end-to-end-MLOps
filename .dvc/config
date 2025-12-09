@@ -1,0 +1,7 @@
+[cache]
+    type = "reflink,copy"
+[core]
+    remote = capstone-proj
+['remote "capstone-proj"']
+    url = s3://capstone-proj1
+    credentialpath = ~/.aws/credentials
