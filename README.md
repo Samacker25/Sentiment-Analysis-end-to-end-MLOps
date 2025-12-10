@@ -172,32 +172,7 @@ API
 
 Flask REST API
 
-📂 8. Project Structure
-├── data/                     # DVC managed dataset
-├── src/
-│   ├── data_ingestion.py
-│   ├── data_preprocessing.py
-│   ├── feature_engineering.py
-│   ├── model_trainer.py
-│   ├── model_evaluation.py
-│   └── utils.py
-├── models/                   # Saved models (MLflow-managed)
-├── deployment/
-│   ├── Dockerfile
-│   ├── deployment.yaml
-│   └── service.yaml
-├── scripts/
-│   ├── promote_model.py
-├── tests/
-│   ├── test_model.py
-│   └── test_flask_app.py
-├── app.py                    # Flask API
-├── requirements.txt
-├── dvc.yaml                  # DVC pipeline
-├── README.md
-└── .github/workflows/ci.yaml # GitHub Actions pipeline
-
-▶️ 9. Run Project Locally
+▶️ 8. Run Project Locally
 1️⃣ Create a virtual environment
 python -m venv venv
 source venv/bin/activate
@@ -211,18 +186,18 @@ dvc repro
 4️⃣ Run Flask API
 python app.py
 
-# 10. Docker Build
+# 9. Docker Build
 docker build -t sentiment-app .
 docker run -p 5000:5000 sentiment-app
 
-# 11. Deploy to Kubernetes (EKS)
+# 10. Deploy to Kubernetes (EKS)
 Update kubeconfig:
 aws eks update-kubeconfig --region us-east-1 --name flask-app-cluster
 
 Apply deployment:
 kubectl apply -f deployment.yaml
 
-# 12. Monitoring
+# 11. Monitoring
 
 Prometheus:
 
@@ -233,7 +208,7 @@ Grafana:
 
 kubectl port-forward svc/grafana-service 3000:3000
 
-# 13. Features
+# 12. Features
 
 ✔ End-to-end automated ML pipeline
 ✔ Model registry + version control
@@ -243,7 +218,7 @@ kubectl port-forward svc/grafana-service 3000:3000
 ✔ Monitoring + alerting
 ✔ Cloud-native architecture
 
-# 14. Future Improvements
+# 13. Future Improvements
 
 Add drift detection
 
